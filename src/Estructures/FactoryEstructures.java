@@ -25,6 +25,8 @@ public class FactoryEstructures implements AbstractFactory {
                 return new Loot();
             case "solarenergy":
                 return new SolarEnergy();
+            case "comienzo":
+                break;
         }
         return null;
     }
