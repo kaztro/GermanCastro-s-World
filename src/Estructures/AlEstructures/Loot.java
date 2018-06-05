@@ -1,6 +1,8 @@
-package Estructures;
+package Estructures.AlEstructures;
 
-public class CallCenter implements Estructures {
+import Estructures.Estructures;
+
+public class Loot implements Estructures {
     @Override
     public void build(){
         System.out.println("--Construyendo maquila futuristas-- Â¡pam!, Â¡plaf!, Â¡clonc!, Â¡zis, zas!");

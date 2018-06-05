@@ -1,6 +1,8 @@
-package Estructures;
+package Estructures.SuEstructures;
 
-public class Army implements Estructures {
+import Estructures.Estructures;
+
+public class SurvivorsArmy implements Estructures {
     @Override
     public void build(){
         System.out.println("--Construyendo base-- Â¡pam!, Â¡plaf!, Â¡clonc!, Â¡zis, zas!");
