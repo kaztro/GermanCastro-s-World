@@ -1,6 +1,6 @@
-package Estructures.AnEstructures;
+package Estructures;
 
-public class OffsetPresses Implements Estructures{
+public class BioCommance implements Estructures{
     @Override
     public void build(){
         System.out.println("--Construyendo maquila futuristas-- Â¡pam!, Â¡plaf!, Â¡clonc!, Â¡zis, zas!");

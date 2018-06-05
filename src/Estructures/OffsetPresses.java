@@ -1,8 +1,6 @@
-package Estructures.SuEstructures;
+package Estructures;
 
-import Estructures.Estructures;
-
-public class CallCenter implements Estructures {
+public class OffsetPresses implements Estructures{
     @Override
     public void build(){
         System.out.println("--Construyendo maquila futuristas-- Â¡pam!, Â¡plaf!, Â¡clonc!, Â¡zis, zas!");

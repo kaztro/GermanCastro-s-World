@@ -1,8 +1,6 @@
-package Estructures.AlEstructures;
+package Estructures;
 
-import Estructures.Estructures;
-
-public class Loot implements Estructures {
+public class SolarEnergy implements Estructures{
     @Override
     public void build(){
         System.out.println("--Construyendo maquila futuristas-- Â¡pam!, Â¡plaf!, Â¡clonc!, Â¡zis, zas!");

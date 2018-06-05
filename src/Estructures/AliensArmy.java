@@ -1,8 +1,8 @@
-package Estructures.AnEstructures;
+package Estructures;
 
 import Estructures.Estructures;
 
-public class AndroidsArmy implements Estructures {
+public class AliensArmy implements Estructures {
     @Override
     public void build(){
         System.out.println("--Construyendo base-- Â¡pam!, Â¡plaf!, Â¡clonc!, Â¡zis, zas!");
