@@ -6,17 +6,11 @@ import Factory.FactoryProducer;
 
 public class AndroidsBuilder extends RaceBuilder {
 
-    @Override
-    public Race getRace() {
-        return super.getRace();
-    }
 
-    @Override
     public void generateRace() {
         super.generateRace();
     }
 
-    @Override
     public void constructCommandCenter() {
         CommandCenter center = new CommandCenter();
         center.setLevel(0);
@@ -24,20 +18,17 @@ public class AndroidsBuilder extends RaceBuilder {
         race.setCommandCenter(center);
     }
 
-    @Override
     public void generateEstructures() {
         AbstractFactory factory;
         factory = FactoryProducer.getFactory("estructure");
         Estructures estructures = factory.getEstructures("comienzo");
     }
 
-    @Override
-    public void setTempConstruct() {
+    public void TempConstruct() {
         race.setTempConstruct(2);
     }
 
-    @Override
-    public void setCantDamage() {
+    public void CantDamage() {
         race.setCantDamage(30);
     }
 }

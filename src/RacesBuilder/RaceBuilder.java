@@ -15,7 +15,9 @@ public abstract class RaceBuilder {
 
     public abstract void generateEstructures();
 
-    public abstract void setTempConstruct ();
+    public abstract void TempConstruct ();
 
-    public abstract void setCantDamage();
+    public abstract void CantDamage();
+
+
 }
