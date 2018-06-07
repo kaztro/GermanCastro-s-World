@@ -5,7 +5,7 @@ public class Earth {
 
 
     public void setRaceBuilder(RaceBuilder rb) {
-        RaceBuilder = rb;
+        raceBuilder = rb;
     }
 
     public Race getRace() {

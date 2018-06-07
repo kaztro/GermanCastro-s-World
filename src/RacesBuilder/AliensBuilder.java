@@ -62,4 +62,4 @@ public class AliensBuilder extends RaceBuilder {
     public void setCantDamage() {
         race.setCantDamage(20);
     }
-/*
+*/

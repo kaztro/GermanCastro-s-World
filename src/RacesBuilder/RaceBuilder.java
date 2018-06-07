@@ -19,5 +19,4 @@ public abstract class RaceBuilder {
 
     public abstract void CantDamage();
 
-
 }
