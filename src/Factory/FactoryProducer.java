@@ -1,6 +1,6 @@
 package Factory;
 
-import Estructures.FactoryEstructures;
+import Estructures.Proletariat.FactoryEstructures;
 
 public class FactoryProducer {
     public static AbstractFactory getFactory(String type){

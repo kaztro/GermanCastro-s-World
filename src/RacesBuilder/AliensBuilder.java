@@ -1,7 +1,10 @@
 package RacesBuilder;
 
 import CommandCenter.CommandCenter;
-import Estructures.Estructures;
+import CommandCenter.CCDirector;
+import CommandCenter.CCBuilder;
+import CommandCenter.AndroidsCC;
+import Estructures.Proletariat.Estructures;
 import Factory.AbstractFactory;
 import Factory.FactoryProducer;
 

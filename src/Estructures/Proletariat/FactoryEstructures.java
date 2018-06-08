@@ -1,5 +1,15 @@
-package Estructures;
+package Estructures.Proletariat;
 
+import Estructures.Army.AliensArmy;
+import Estructures.Army.AndroidsArmy;
+import Estructures.Army.SurvivorsArmy;
+import Estructures.Energy.BioCommance;
+import Estructures.Energy.EnergyDrinks;
+import Estructures.Energy.SolarEnergy;
+import Estructures.Proletariat.CallCenter;
+import Estructures.Proletariat.Estructures;
+import Estructures.Proletariat.Loot;
+import Estructures.Proletariat.OffsetPresses;
 import Factory.AbstractFactory;
 
 
@@ -7,24 +17,12 @@ public class FactoryEstructures implements AbstractFactory {
     @Override
     public Estructures getEstructures(String type) {
         switch (type) {
-            case "survarmy":
-                return new SurvivorsArmy();
             case "callcenter":
                 return new CallCenter();
-            case "energydrinks":
-                return new EnergyDrinks();
-            case "anarmy":
-                return new AndroidsArmy();
-            case "biocommance":
-                return new BioCommance();
             case "offset":
                 return new OffsetPresses();
-            case "alarmy":
-                return new AliensArmy();
             case "loot":
                 return new Loot();
-            case "solarenergy":
-                return new SolarEnergy();
             case "comienzo":
                 break;
         }

@@ -1,7 +1,7 @@
 package RacesBuilder;
 
 import CommandCenter.CCDirector;
-import Estructures.Estructures;
+import Estructures.Proletariat.Estructures;
 
 public class Race {
     private CCDirector CommandCenter;

@@ -9,7 +9,7 @@ public class AliensCC extends CCBuilder {
 
         public void buildMoney() { cc.setMoney(100); }
 
-        public void buildEnergy() { cc.setEnergy(500); }
+    //public void buildEnergy() { cc.setEnergy(500); }
 
         public void buildMaterials() { cc.setMaterials(400); }
 }

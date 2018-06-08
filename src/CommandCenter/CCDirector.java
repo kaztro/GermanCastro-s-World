@@ -11,7 +11,7 @@ public class CCDirector {
         cCBuilder.buildLife();
         cCBuilder.buildLevel();
         cCBuilder.buildMoney();
-        cCBuilder.buildEnergy();
+        //cCBuilder.buildEnergy();
         cCBuilder.buildMaterials();
 
     }

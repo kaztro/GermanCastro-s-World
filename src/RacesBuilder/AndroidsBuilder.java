@@ -4,7 +4,7 @@ import CommandCenter.CommandCenter;
 import CommandCenter.CCDirector;
 import CommandCenter.CCBuilder;
 import CommandCenter.AndroidsCC;
-import Estructures.Estructures;
+import Estructures.Proletariat.Estructures;
 import Factory.AbstractFactory;
 import Factory.FactoryProducer;
 

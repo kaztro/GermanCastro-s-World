@@ -1,9 +1,8 @@
 package List;
 
-import Estructures.AliensArmy;
+import Estructures.Army.AliensArmy;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class AliensArmyList {
     private ArrayList<AliensArmy> army;

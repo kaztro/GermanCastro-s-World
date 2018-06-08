@@ -4,7 +4,7 @@ public class CommandCenter {
     private int life;
     private int level;
     private int money;
-    private int energy;
+    //private int energy;
     private int materials;
 
     public void setLife(int life) {
@@ -19,9 +19,7 @@ public class CommandCenter {
         this.money = money;
     }
 
-    public void setEnergy(int energy) {
-        this.energy = energy;
-    }
+    //public void setEnergy(int energy) { this.energy = energy; }
 
     public void setMaterials(int materials) {
         this.materials = materials;
