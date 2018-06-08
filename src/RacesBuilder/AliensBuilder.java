@@ -1,5 +1,6 @@
 package RacesBuilder;
 
+import CommandCenter.CommandCenter;
 import Estructures.Estructures;
 import Factory.AbstractFactory;
 import Factory.FactoryProducer;
@@ -8,10 +9,13 @@ public class AliensBuilder extends RaceBuilder {
     public AliensBuilder() {super.race = new Race();}
 
     public void constructCommandCenter() {
-        CommandCenter center = new CommandCenter();
-        center.setLevel(0);
-        center.setLife(100);
-        race.setCommandCenter(center);
+        CCDirector cc = new CCDirector();
+        CCBuilder ccan = new AndroidsCC();
+
+        cc.setCCBuilder(ccan);
+        cc.buildCommandCenter();
+
+        CommandCenter commandCenter = cc.getCommandCenter();
     }
     public void generateEstructures(){
         AbstractFactory factory;

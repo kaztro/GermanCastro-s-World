@@ -1,5 +1,9 @@
 package RacesBuilder;
 
+import CommandCenter.CCDirector;
+import CommandCenter.CCBuilder;
+import CommandCenter.CommandCenter;
+import CommandCenter.SurvivorsCC;
 import Estructures.Estructures;
 import Factory.AbstractFactory;
 import Factory.FactoryProducer;
@@ -12,10 +16,13 @@ public class SurvivorsBuilder extends RaceBuilder {
     }
 
     public void constructCommandCenter() {
-        CommandCenter center = new CommandCenter();
-        center.setLevel(0);
-        center.setLife(100);
-        race.setCommandCenter(center);
+        CCDirector cc = new CCDirector();
+        CCBuilder ccs = new SurvivorsCC();
+
+        cc.setCCBuilder(ccs);
+        cc.buildCommandCenter();
+
+        CommandCenter commandCenter = cc.getCommandCenter();
     }
 
     public void generateEstructures() {

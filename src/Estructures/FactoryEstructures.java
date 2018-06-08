@@ -1,12 +1,12 @@
 package Estructures;
 
 import Factory.AbstractFactory;
-import Races.Races;
+
 
 public class FactoryEstructures implements AbstractFactory {
     @Override
-    public Estructures getEstructures(String type){
-        switch(type){
+    public Estructures getEstructures(String type) {
+        switch (type) {
             case "survarmy":
                 return new SurvivorsArmy();
             case "callcenter":
@@ -30,8 +30,5 @@ public class FactoryEstructures implements AbstractFactory {
         }
         return null;
     }
-    @Override
-    public Races getRaces(String type){
-        return null;
-    }
 }
+

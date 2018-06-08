@@ -1,39 +1,28 @@
 package RacesBuilder;
 
+import CommandCenter.CCDirector;
 import Estructures.Estructures;
 
 public class Race {
-    private CommandCenter CommandCenter;
+    private CCDirector CommandCenter;
     private Estructures estructure;
     private int tempConstruct;
     private int cantDamage;
 
-    public RacesBuilder.CommandCenter getCommandCenter() {
+    public CommandCenter.CommandCenter getCommandCenter() {
         return CommandCenter;
     }
 
-    public void setCommandCenter(RacesBuilder.CommandCenter commandCenter) {
+    public void setCommandCenter(CCDirector commandCenter) {
         CommandCenter = commandCenter;
-    }
-
-    public Estructures getEstructure() {
-        return estructure;
     }
 
     public void setEstructure(Estructures estructure) {
         this.estructure = estructure;
     }
 
-    public int getTempConstruct() {
-        return tempConstruct;
-    }
-
     public void setTempConstruct(int tempConstruct) {
         this.tempConstruct = tempConstruct;
-    }
-
-    public int getCantDamage() {
-        return cantDamage;
     }
 
     public void setCantDamage(int cantDamage) {
