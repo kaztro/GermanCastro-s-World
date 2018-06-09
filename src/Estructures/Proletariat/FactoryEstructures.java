@@ -1,15 +1,8 @@
 package Estructures.Proletariat;
 
-import Estructures.Army.AliensArmy;
-import Estructures.Army.AndroidsArmy;
-import Estructures.Army.SurvivorsArmy;
-import Estructures.Energy.BioCommance;
-import Estructures.Energy.EnergyDrinks;
-import Estructures.Energy.SolarEnergy;
-import Estructures.Proletariat.CallCenter;
-import Estructures.Proletariat.Estructures;
-import Estructures.Proletariat.Loot;
-import Estructures.Proletariat.OffsetPresses;
+import Estructures.Army.Army;
+import Estructures.Energy.Energy;
+import Estructures.Vehicles.Vehicles;
 import Factory.AbstractFactory;
 
 
@@ -26,6 +19,21 @@ public class FactoryEstructures implements AbstractFactory {
             case "comienzo":
                 break;
         }
+        return null;
+    }
+
+    @Override
+    public Army getArmy(String type) {
+        return null;
+    }
+
+    @Override
+    public Energy getEnergy(String type) {
+        return null;
+    }
+
+    @Override
+    public Vehicles getVehicles(String type) {
         return null;
     }
 }

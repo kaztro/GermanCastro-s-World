@@ -1,6 +1,6 @@
 package Player;
 
-abstract class PlayerBuilder {
+public abstract class PlayerBuilder {
     protected Player player;
 
     public Player getPlayer() {

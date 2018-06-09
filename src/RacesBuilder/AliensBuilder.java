@@ -3,7 +3,7 @@ package RacesBuilder;
 import CommandCenter.CommandCenter;
 import CommandCenter.CCDirector;
 import CommandCenter.CCBuilder;
-import CommandCenter.AndroidsCC;
+import CommandCenter.AliensCC;
 import Estructures.Proletariat.Estructures;
 import Factory.AbstractFactory;
 import Factory.FactoryProducer;
@@ -13,13 +13,14 @@ public class AliensBuilder extends RaceBuilder {
 
     public void constructCommandCenter() {
         CCDirector cc = new CCDirector();
-        CCBuilder ccan = new AndroidsCC();
+        CCBuilder cca = new AliensCC();
 
-        cc.setCCBuilder(ccan);
+        cc.setCCBuilder(cca);
         cc.buildCommandCenter();
 
         CommandCenter commandCenter = cc.getCommandCenter();
     }
+
     public void generateEstructures(){
         AbstractFactory factory;
         factory = FactoryProducer.getFactory("estructure");
