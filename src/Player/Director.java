@@ -14,5 +14,6 @@ public class Director {
     public void buildPlayer() {
         playerBuilder.createNewPlayer();
         playerBuilder.buildName();
+        playerBuilder.buildEarth();
     }
 }

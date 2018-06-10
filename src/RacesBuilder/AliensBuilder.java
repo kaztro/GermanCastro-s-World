@@ -11,25 +11,29 @@ import Factory.FactoryProducer;
 public class AliensBuilder extends RaceBuilder {
     public AliensBuilder() {super.race = new Race();}
 
-    public void constructCommandCenter() {
+    @Override
+    public void buildCommandCenter() {
         CCDirector cc = new CCDirector();
         CCBuilder cca = new AliensCC();
-
         cc.setCCBuilder(cca);
         cc.buildCommandCenter();
 
-        CommandCenter commandCenter = cc.getCommandCenter();
-    }
-
-    public void generateEstructures(){
+        //CommandCenter commandCenter = cc.getCommandCenter();
+    }/*
+    @Override
+    public void buildEstructures(){
         AbstractFactory factory;
-        factory = FactoryProducer.getFactory("estructure");
-        Estructures estructures = factory.getEstructures("comienzo");
-    }
-    public void TempConstruct (){
+        factory = FactoryProducer.getFactory("proletariat");
+        Estructures estructures = factory.getEstructures("callcenter");
+    }*/
+
+    @Override
+    public void buildTempConstruct() {
         race.setTempConstruct(1);
     }
-    public void CantDamage(){
+
+    @Override
+    public void buildCantDamage() {
         race.setCantDamage(20);
     }
 

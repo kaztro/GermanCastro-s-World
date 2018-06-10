@@ -11,12 +11,12 @@ public abstract class RaceBuilder {
         race = new Race();
     }
 
-    public abstract void constructCommandCenter();
+    public abstract void buildCommandCenter();
 
-    public abstract void generateEstructures();
+    //public abstract void buildEstructures();
 
-    public abstract void TempConstruct ();
+    public abstract void buildTempConstruct();
 
-    public abstract void CantDamage();
+    public abstract void buildCantDamage();
 
 }

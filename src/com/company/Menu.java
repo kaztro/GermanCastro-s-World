@@ -2,10 +2,7 @@ package com.company;
 
 import Factory.AbstractFactory;
 import Factory.FactoryProducer;
-import Player.Player;
-//import RacesBuilder.Earth;
-import Player.PlayerBuilder;
-import Player.ConcretePlayer;
+import Player.*;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -38,13 +35,6 @@ public class Menu {
 
     public void game() {
 
-        Player avatar = new Player();
-        PlayerBuilder p1 = new ConcretePlayer();
-
-
-        Player avatar2 = new Player();
-        PlayerBuilder p2 = new ConcretePlayer();
-
         AbstractFactory fact1, fact2, fact3, fact4;
         fact1 = FactoryProducer.getFactory("proletariat");
         fact2 = FactoryProducer.getFactory("army");
@@ -63,11 +53,18 @@ public class Menu {
 
                 switch (op) {
                     case 1:
-                        p1.buildName();
-                        p1.buildEarth();
+                        Director avatar = new Director();
+                        PlayerBuilder p1 = new ConcretePlayer();
+                        avatar.setPlayerBuilder(p1);
+                        avatar.buildPlayer();
+                        //Player player1 = avatar.getPlayer();
 
-                        p2.buildName();
-                        p2.buildEarth();
+                        Director avatar2 = new Director();
+                        PlayerBuilder p2 = new ConcretePlayer();
+                        avatar2.setPlayerBuilder(p2);
+                        avatar2.buildPlayer();
+                        //Player player2 = avatar2.getPlayer();
+                        break;
 
                     default:
                         System.out.println("The number you type It's not part of the options or maybe It's not a number.\nPlease read the menu");

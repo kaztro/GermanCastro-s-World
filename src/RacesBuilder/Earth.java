@@ -13,9 +13,10 @@ public class Earth {
     }
 
     public void generateRace(){
-        raceBuilder.constructCommandCenter();
-        raceBuilder.TempConstruct();
-        raceBuilder.CantDamage();
+        raceBuilder.buildCommandCenter();
+        //raceBuilder.buildEstructures();
+        raceBuilder.buildTempConstruct();
+        raceBuilder.buildCantDamage();
     }
 }
 

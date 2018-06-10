@@ -5,13 +5,15 @@ import RacesBuilder.*;
 import java.util.Scanner;
 
 public class ConcretePlayer extends PlayerBuilder {
+    @Override
     public void buildName() {
-        System.out.println("Ingresa el tu nickname");
+        System.out.println("Nickname: ");
         Scanner cin = new Scanner(System.in);
         String nickname = cin.nextLine();
         player.setName(nickname);
     }
 
+    @Override
     public void buildEarth() {
         Earth reign = new Earth();
 
@@ -23,21 +25,22 @@ public class ConcretePlayer extends PlayerBuilder {
 
         switch (key) {
             case "aliens":
-                RaceBuilder AliensBuilder = new AliensBuilder();
-                reign.setRaceBuilder(AliensBuilder);
+                RaceBuilder alien = new AliensBuilder();
+                reign.setRaceBuilder(alien);
                 reign.generateRace();
                 //Race race1 = reign.getRace();
             case "androids":
-                RaceBuilder AndroidsBuilder = new AndroidsBuilder();
-                reign.setRaceBuilder(AndroidsBuilder);
+                RaceBuilder android = new AndroidsBuilder();
+                reign.setRaceBuilder(android);
                 reign.generateRace();
                 //Race race2 = reign.getRace();
             case "survivors":
-                RaceBuilder SurvivorsBuilder = new SurvivorsBuilder();
-                reign.setRaceBuilder(SurvivorsBuilder);
+                RaceBuilder survivor = new SurvivorsBuilder();
+                reign.setRaceBuilder(survivor);
                 reign.generateRace();
                 //Race race3 = reign.getRace();
         }
+
         /*
         RaceBuilder AndroidsBuilder = new AndroidsBuilder();
 
@@ -45,5 +48,10 @@ public class ConcretePlayer extends PlayerBuilder {
         reign.generateRace();
 
         Race race = reign.getRace();*/
+    }
+
+    @Override
+    public void createNewPlayer() {
+        super.createNewPlayer();
     }
 }

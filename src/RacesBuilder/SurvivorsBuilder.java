@@ -15,27 +15,31 @@ public class SurvivorsBuilder extends RaceBuilder {
         super.generateRace();
     }
 
-    public void constructCommandCenter() {
+    @Override
+    public void buildCommandCenter() {
         CCDirector cc = new CCDirector();
         CCBuilder ccs = new SurvivorsCC();
 
         cc.setCCBuilder(ccs);
         cc.buildCommandCenter();
 
-        CommandCenter commandCenter = cc.getCommandCenter();
+        //CommandCenter commandCenter = cc.getCommandCenter();
     }
 
-    public void generateEstructures() {
-        AbstractFactory factory;
-        factory = FactoryProducer.getFactory("estructure");
-        Estructures estructures = factory.getEstructures("comienzo");
-    }
-
-    public void TempConstruct() {
+    /*
+        @Override
+        public void buildEstructures() {
+            AbstractFactory factory;
+            factory = FactoryProducer.getFactory("estructure");
+            Estructures estructures = factory.getEstructures("comienzo");
+        }*/
+    @Override
+    public void buildTempConstruct() {
         race.setTempConstruct(2);
     }
 
-    public void CantDamage() {
+    @Override
+    public void buildCantDamage() {
         race.setCantDamage(20);
     }
 }

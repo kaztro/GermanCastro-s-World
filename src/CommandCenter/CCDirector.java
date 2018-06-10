@@ -8,11 +8,10 @@ public class CCDirector {
     public CommandCenter getCommandCenter() {return cCBuilder.getCommandCenter();}
 
     public void buildCommandCenter() {
+        cCBuilder.createNewCommandCenter();
         cCBuilder.buildLife();
         cCBuilder.buildLevel();
         cCBuilder.buildMoney();
-        //cCBuilder.buildEnergy();
         cCBuilder.buildMaterials();
-
     }
 }

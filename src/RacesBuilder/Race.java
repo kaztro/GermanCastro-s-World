@@ -9,9 +9,9 @@ public class Race {
     private int tempConstruct;
     private int cantDamage;
 
-    public CCDirector getCommandCenter() {
+    /*public CCDirector getCommandCenter() {
         return CommandCenter;
-    }
+    }*/
 
     public void setCommandCenter(CCDirector commandCenter) {
         CommandCenter = commandCenter;
@@ -21,9 +21,9 @@ public class Race {
         estructures = factoryProducer;
     }
 
-    public FactoryProducer getEstructures() {
+    /*public FactoryProducer getEstructures() {
         return estructures;
-    }
+    }*/
 
     public void setTempConstruct(int tempConstruct) {
         this.tempConstruct = tempConstruct;
