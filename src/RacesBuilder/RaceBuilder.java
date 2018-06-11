@@ -1,7 +1,7 @@
 package RacesBuilder;
 
 public abstract class RaceBuilder {
-    protected Race race;
+    protected Race race = new Race();
 
     public Race getRace() {
         return race;
@@ -13,7 +13,7 @@ public abstract class RaceBuilder {
 
     public abstract void buildCommandCenter();
 
-    //public abstract void buildEstructures();
+    public abstract void buildEstructures();
 
     public abstract void buildTempConstruct();
 

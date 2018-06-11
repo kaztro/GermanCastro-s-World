@@ -1,7 +1,7 @@
 package Estructures.Army;
 
 public interface Army {
-    public void GenerateSquad();
+    void GenerateSquad();
 
-    public void GenerateSuperSoldier();
+    void GenerateSuperSoldier();
 }

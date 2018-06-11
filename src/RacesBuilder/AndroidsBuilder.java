@@ -26,14 +26,16 @@ public class AndroidsBuilder extends RaceBuilder {
         //CommandCenter commandCenter = cc.getCommandCenter();
     }
 
-    /*
+
         @Override
         public void buildEstructures() {
             AbstractFactory factory;
             factory = FactoryProducer.getFactory("estructure");
-            Estructures estructures = factory.getEstructures("comienzo");
+            //System.out.println("hola");
+            //Estructures estructures = factory.getEstructures("comienzo");
+            //System.out.println("holap");
         }
-    */
+
     @Override
     public void buildTempConstruct() {
         race.setTempConstruct(2);

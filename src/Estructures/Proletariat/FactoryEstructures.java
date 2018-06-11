@@ -17,6 +17,7 @@ public class FactoryEstructures implements AbstractFactory {
             case "loot":
                 return new Loot();
             case "comienzo":
+                System.out.println("hola");
                 break;
         }
         return null;

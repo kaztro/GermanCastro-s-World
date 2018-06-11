@@ -16,6 +16,7 @@ public class ArmyFactory implements AbstractFactory {
             case "survivorsarmy":
                 return new SurvivorsArmy();
             case "comienzo":
+                System.out.println("hola");
                 break;
         }
         return null;

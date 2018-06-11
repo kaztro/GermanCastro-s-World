@@ -34,14 +34,16 @@ public class Menu {
     }
 
     public void game() {
-
+        /*
         AbstractFactory fact1, fact2, fact3, fact4;
         fact1 = FactoryProducer.getFactory("proletariat");
         fact2 = FactoryProducer.getFactory("army");
         fact3 = FactoryProducer.getFactory("energy");
         fact4 = FactoryProducer.getFactory("vehicles");
-
+        */
         Scanner scanner = new Scanner(System.in);
+
+        Director avatar = new Director(), avatar2 = new Director();
 
         int op = 0;
 
@@ -53,18 +55,19 @@ public class Menu {
 
                 switch (op) {
                     case 1:
-                        Director avatar = new Director();
                         PlayerBuilder p1 = new ConcretePlayer();
                         avatar.setPlayerBuilder(p1);
                         avatar.buildPlayer();
                         //Player player1 = avatar.getPlayer();
-
-                        Director avatar2 = new Director();
+                        //System.out.println(player1);
                         PlayerBuilder p2 = new ConcretePlayer();
                         avatar2.setPlayerBuilder(p2);
                         avatar2.buildPlayer();
-                        //Player player2 = avatar2.getPlayer();
+                        //Player player2 = avatar.getPlayer();
+                        //System.out.println(player2);
                         break;
+
+                    case 2:
 
                     default:
                         System.out.println("The number you type It's not part of the options or maybe It's not a number.\nPlease read the menu");

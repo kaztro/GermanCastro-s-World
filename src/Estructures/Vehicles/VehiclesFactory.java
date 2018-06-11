@@ -14,6 +14,7 @@ public class VehiclesFactory implements AbstractFactory {
             case "convoy":
                 return new Convoy();
             case "comienzo":
+                System.out.println("hola");
                 break;
         }
         return null;

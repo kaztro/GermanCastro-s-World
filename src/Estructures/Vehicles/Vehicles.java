@@ -1,7 +1,7 @@
 package Estructures.Vehicles;
 
 public interface Vehicles {
-    public void GenerateTank();
+    void GenerateTank();
 
-    public void GenerateConvoy();
+    void GenerateConvoy();
 }
