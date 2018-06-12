@@ -21,4 +21,8 @@ public abstract class PlayerBuilder {
         return player.getName();
     }
 
+    public String giveRaceName() {
+        return player.getRacename();
+    }
+
 }

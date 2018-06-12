@@ -16,7 +16,9 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class AliensBuilder extends RaceBuilder {
-    public AliensBuilder() {super.race = new Race();}
+    public AliensBuilder() {
+        super.race = new Race();
+    }
 
     @Override
     public void buildCommandCenter() {
@@ -27,6 +29,8 @@ public class AliensBuilder extends RaceBuilder {
 
         //CommandCenter commandCenter = cc.getCommandCenter();
     }
+
+
     /*
     public void options(){
         System.out.println("Bien hecho, ahora tienes disponible xx de dinero, xx de energia y xx de materiales.");
@@ -91,6 +95,11 @@ public class AliensBuilder extends RaceBuilder {
     @Override
     public void buildCantDamage() {
         race.setCantDamage(20);
+    }
+
+    @Override
+    public String returnName() {
+        return "Alien";
     }
 
 }

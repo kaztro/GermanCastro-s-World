@@ -25,16 +25,19 @@ public class ConcretePlayer extends PlayerBuilder {
 
         switch (key) {
             case "aliens":
+                player.setRacename("Aliens");
                 RaceBuilder alien = new AliensBuilder();
                 reign.setRaceBuilder(alien);
                 reign.generateRace();
                 //Race race1 = reign.getRace();
             case "androids":
+                player.setRacename("Androids");
                 RaceBuilder android = new AndroidsBuilder();
                 reign.setRaceBuilder(android);
                 reign.generateRace();
                 //Race race2 = reign.getRace();
             case "survivors":
+                player.setRacename("Survivors");
                 RaceBuilder survivor = new SurvivorsBuilder();
                 reign.setRaceBuilder(survivor);
                 reign.generateRace();
@@ -58,5 +61,10 @@ public class ConcretePlayer extends PlayerBuilder {
     @Override
     public String givePlayerName() {
         return super.givePlayerName();
+    }
+
+    @Override
+    public String giveRaceName() {
+        return super.giveRaceName();
     }
 }

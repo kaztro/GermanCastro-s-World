@@ -5,6 +5,7 @@ import RacesBuilder.Earth;
 public class Player {
     private String name;
     private Earth race;
+    private String racename;
 
     public void setName(String name) {
         this.name = name;
@@ -20,6 +21,14 @@ public class Player {
 
     public Earth getRace() {
         return race;
+    }
+
+    public void setRacename(String racename) {
+        this.racename = racename;
+    }
+
+    public String getRacename() {
+        return racename;
     }
 }
 

@@ -36,7 +36,7 @@ public class Menu {
     public void gameOptions(PlayerBuilder p, int dinero, int energia, int materiales) {
         //DATOS QUEMADOS TEMPORALMENTE
 
-        String name = p.givePlayerName();
+        String name = p.givePlayerName(), raceName = p.giveRaceName();
 
         int opt = 0;
 
@@ -49,8 +49,9 @@ public class Menu {
 
         while (opt != 2) {
             System.out.println("-----------------------------------------------------------------------");
-            System.out.println("¦Es tu turno " + name + " Que deseas hacer?                            ¦");
-            System.out.println("¦Dinero: " + dinero + " Energia: " + energia + " Materiales: " + materiales + "    ¦");
+            System.out.println("¦                    You lead the " + raceName + "                         ¦");
+            System.out.println("¦It's your turn " + name + " What do you wanna do now?                     ¦");
+            System.out.println("¦Wallet: " + dinero + " energy: " + energia + " Materials: " + materiales + "      ¦");
             System.out.println("¦1.Build Energy Estructure                                             ¦");
             System.out.println("¦2.Build Money Estructure                                              ¦");
             System.out.println("¦3.Build Material Estructure                                           ¦");
@@ -62,7 +63,8 @@ public class Menu {
                 opt = scanner.nextInt();
                 switch (opt) {
                     case 1:
-
+                        //fact1.getEnergy();
+                        break;
                 }
             } catch (InputMismatchException E) {
                 System.err.println("The number you've type It's not an Int");
@@ -141,6 +143,7 @@ public class Menu {
                 gameOptions(p1, 1000, 500, 400);
             }
         }
+
     }
 /*
     public void workingBhru() {

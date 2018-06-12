@@ -43,4 +43,10 @@ public class SurvivorsBuilder extends RaceBuilder {
     public void buildCantDamage() {
         race.setCantDamage(20);
     }
+
+    @Override
+    public String returnName() {
+        return "Survivor";
+    }
+
 }

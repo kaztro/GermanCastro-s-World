@@ -19,4 +19,5 @@ public abstract class RaceBuilder {
 
     public abstract void buildCantDamage();
 
+    public abstract String returnName();
 }

@@ -45,4 +45,10 @@ public class AndroidsBuilder extends RaceBuilder {
     public void buildCantDamage() {
         race.setCantDamage(30);
     }
+
+    @Override
+    public String returnName() {
+        return "Android";
+    }
+
 }
