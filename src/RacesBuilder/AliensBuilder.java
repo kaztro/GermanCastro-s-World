@@ -10,6 +10,7 @@ import Estructures.Proletariat.Estructures;
 import Estructures.Vehicles.Vehicles;
 import Factory.AbstractFactory;
 import Factory.FactoryProducer;
+import Lists.AliensList;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -26,6 +27,7 @@ public class AliensBuilder extends RaceBuilder {
 
         //CommandCenter commandCenter = cc.getCommandCenter();
     }
+    /*
     public void options(){
         System.out.println("Bien hecho, ahora tienes disponible xx de dinero, xx de energia y xx de materiales.");
         System.out.println("Que quieres construir?");
@@ -33,7 +35,7 @@ public class AliensBuilder extends RaceBuilder {
         System.out.println("2. Soldados");
         System.out.println("3. Generador de Energia");
         System.out.println("4. Vehiculos");
-    }
+    }*//*
     @Override
     public void buildEstructures() {
         AbstractFactory fact1, fact2, fact3, fact4;
@@ -41,6 +43,8 @@ public class AliensBuilder extends RaceBuilder {
         Scanner cin = new Scanner(System.in);
 
         int obj = 0;
+
+        AliensList estructureList = new AliensList();
 
         while (obj != 2) {
             options();
@@ -52,6 +56,7 @@ public class AliensBuilder extends RaceBuilder {
                     case 1:
                         fact1 = FactoryProducer.getFactory("proletariat");
                         Estructures estructures = fact1.getEstructures("callcenter");
+                        estructureList.addEstructures(estructures);
                         break;
                     case 2:
                         fact2 = FactoryProducer.getFactory("army");
@@ -76,7 +81,7 @@ public class AliensBuilder extends RaceBuilder {
             //factory = FactoryProducer.getFactory("proletariat");
             //Estructures estructures = factory.getEstructures("callcenter");
         }
-    }
+    }*/
 
     @Override
     public void buildTempConstruct() {

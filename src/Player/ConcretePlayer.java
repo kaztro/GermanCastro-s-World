@@ -54,4 +54,9 @@ public class ConcretePlayer extends PlayerBuilder {
     public void createNewPlayer() {
         super.createNewPlayer();
     }
+
+    @Override
+    public String givePlayerName() {
+        return super.givePlayerName();
+    }
 }

@@ -14,7 +14,7 @@ public class Earth {
 
     public void generateRace(){
         raceBuilder.buildCommandCenter();
-        raceBuilder.buildEstructures();
+        //raceBuilder.buildEstructures();
         raceBuilder.buildTempConstruct();
         raceBuilder.buildCantDamage();
     }

@@ -1,5 +1,7 @@
 package Player;
 
+import RacesBuilder.Earth;
+
 public abstract class PlayerBuilder {
     protected Player player;
 
@@ -14,4 +16,9 @@ public abstract class PlayerBuilder {
     public abstract void buildName();
 
     public abstract void buildEarth();
+
+    public String givePlayerName() {
+        return player.getName();
+    }
+
 }
