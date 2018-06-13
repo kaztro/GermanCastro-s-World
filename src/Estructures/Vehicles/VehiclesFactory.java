@@ -2,6 +2,7 @@ package Estructures.Vehicles;
 
 import Estructures.Army.Army;
 import Estructures.Energy.Energy;
+import Estructures.Materials.Materials;
 import Estructures.Proletariat.Estructures;
 import Factory.AbstractFactory;
 
@@ -13,9 +14,6 @@ public class VehiclesFactory implements AbstractFactory {
                 return new Tank();
             case "convoy":
                 return new Convoy();
-            case "comienzo":
-                System.out.println("hola");
-                break;
         }
         return null;
     }
@@ -35,5 +33,8 @@ public class VehiclesFactory implements AbstractFactory {
         return null;
     }
 
-
+    @Override
+    public Materials getMaterials(String type) {
+        return null;
+    }
 }

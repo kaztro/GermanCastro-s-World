@@ -2,6 +2,7 @@ package Factory;
 
 import Estructures.Army.Army;
 import Estructures.Energy.Energy;
+import Estructures.Materials.Materials;
 import Estructures.Proletariat.Estructures;
 import Estructures.Vehicles.Vehicles;
 
@@ -10,4 +11,6 @@ public interface AbstractFactory {
     Energy getEnergy(String type);
     Estructures getEstructures(String type);
     Vehicles getVehicles(String type);
+
+    Materials getMaterials(String type);
 }

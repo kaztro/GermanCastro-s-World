@@ -64,7 +64,7 @@ public class AliensBuilder extends RaceBuilder {
                         break;
                     case 2:
                         fact2 = FactoryProducer.getFactory("army");
-                        Army army = fact2.getArmy("aliensarmy");
+                        Materials army = fact2.getArmy("aliensarmy");
                         break;
                     case 3:
                         fact3 = FactoryProducer.getFactory("energy");
