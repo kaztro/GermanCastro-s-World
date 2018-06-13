@@ -26,12 +26,12 @@ public abstract class PlayerBuilder {
         return player.getRacename();
     }
 
-    public abstract int giveMoney(RaceBuilder a);
+    public abstract void giveMoney(RaceBuilder a);
 
-    public abstract int giveLife(RaceBuilder a);
+    public abstract void giveLife(RaceBuilder a);
 
-    public abstract int giveMaterials(RaceBuilder a);
+    public abstract void giveMaterials(RaceBuilder a);
 
-    public abstract int giveLevel(RaceBuilder a);
+    public abstract void giveLevel(RaceBuilder a);
 
 }

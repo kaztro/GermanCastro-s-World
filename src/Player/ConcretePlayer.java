@@ -82,22 +82,22 @@ public class ConcretePlayer extends PlayerBuilder {
 
 
     @Override
-    public int giveMoney(RaceBuilder a) {
-        return a.giveMoney();
+    public void giveMoney(RaceBuilder a) {
+        player.setMoney(a.giveMoney());
     }
 
     @Override
-    public int giveLife(RaceBuilder a) {
-        return a.giveLife();
+    public void giveLife(RaceBuilder a) {
+        player.setLife(a.giveLife());
     }
 
     @Override
-    public int giveMaterials(RaceBuilder a) {
-        return a.giveMaterials();
+    public void giveMaterials(RaceBuilder a) {
+        player.setMaterials(a.giveMaterials());
     }
 
     @Override
-    public int giveLevel(RaceBuilder a) {
-        return a.giveLevel();
+    public void giveLevel(RaceBuilder a) {
+        player.setLevel(a.giveLevel());
     }
 }

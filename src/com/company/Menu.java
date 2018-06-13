@@ -164,13 +164,13 @@ public class Menu {
             if (whoStarts == 0) {
                 switch (p1.giveRaceName()) {
                     case "Aliens":
-                        gameOptions(p1, p1.giveMoney(), 500, p1.giveMaterials(), p1.giveRaceName(), "loot", "solarenergy", "aliensarmy", "aliensmaterials");
+                        gameOptions(p1, 1000, 500, 400, p1.giveRaceName(), "loot", "solarenergy", "aliensarmy", "aliensmaterials");
                         break;
                     case "Androids":
-                        gameOptions(p1, p1.giveMoney(), 500, p1.giveMaterials(, p1.giveRaceName(), "offset", "energydrinks", "androidsarmy", "adroidsmaterials");
+                        gameOptions(p1, 1000, 500, 400, p1.giveRaceName(), "offset", "energydrinks", "androidsarmy", "adroidsmaterials");
                         break;
                     case "Survivors":
-                        gameOptions(p1, p1.giveMoney(), 500, p1.giveMaterials(, p1.giveRaceName(), "callcenter", "energydrinks", "survivorsarmy", "survivorsmaterials");
+                        gameOptions(p1, 1000, 500, 400, p1.giveRaceName(), "callcenter", "energydrinks", "survivorsarmy", "survivorsmaterials");
                         break;
                 }
             }
