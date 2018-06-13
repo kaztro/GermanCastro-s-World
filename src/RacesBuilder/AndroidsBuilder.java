@@ -9,7 +9,8 @@ import Factory.AbstractFactory;
 import Factory.FactoryProducer;
 
 public class AndroidsBuilder extends RaceBuilder {
-
+    CCDirector cc = new CCDirector();
+    CCBuilder cca = new AndroidsCC();
 
     public void generateRace() {
         super.generateRace();
@@ -17,8 +18,7 @@ public class AndroidsBuilder extends RaceBuilder {
 
     @Override
     public void buildCommandCenter() {
-        CCDirector cc = new CCDirector();
-        CCBuilder cca = new AndroidsCC();
+
 
         cc.setCCBuilder(cca);
         cc.buildCommandCenter();
@@ -47,8 +47,23 @@ public class AndroidsBuilder extends RaceBuilder {
     }
 
     @Override
-    public String returnName() {
-        return "Android";
+    public int giveMoney() {
+        return cca.getMoney();
+    }
+
+    @Override
+    public int giveLife() {
+        return cca.getLife();
+    }
+
+    @Override
+    public int giveMaterials() {
+        return cca.getMaterials();
+    }
+
+    @Override
+    public int giveLevel() {
+        return cca.getLevel();
     }
 
 }

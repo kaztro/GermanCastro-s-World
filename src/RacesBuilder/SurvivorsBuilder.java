@@ -9,7 +9,8 @@ import Factory.AbstractFactory;
 import Factory.FactoryProducer;
 
 public class SurvivorsBuilder extends RaceBuilder {
-
+    CCDirector cc = new CCDirector();
+    CCBuilder ccs = new SurvivorsCC();
 
     public void generateRace() {
         super.generateRace();
@@ -17,9 +18,6 @@ public class SurvivorsBuilder extends RaceBuilder {
 
     @Override
     public void buildCommandCenter() {
-        CCDirector cc = new CCDirector();
-        CCBuilder ccs = new SurvivorsCC();
-
         cc.setCCBuilder(ccs);
         cc.buildCommandCenter();
 
@@ -45,8 +43,22 @@ public class SurvivorsBuilder extends RaceBuilder {
     }
 
     @Override
-    public String returnName() {
-        return "Survivor";
+    public int giveMoney() {
+        return ccs.getMoney();
     }
 
+    @Override
+    public int giveLife() {
+        return ccs.getLife();
+    }
+
+    @Override
+    public int giveMaterials() {
+        return ccs.getMaterials();
+    }
+
+    @Override
+    public int giveLevel() {
+        return ccs.getLevel();
+    }
 }

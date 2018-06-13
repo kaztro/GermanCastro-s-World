@@ -16,16 +16,18 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class AliensBuilder extends RaceBuilder {
-    public AliensBuilder() {
+    /*public AliensBuilder() {
         super.race = new Race();
-    }
+    }*/
+
+    CCDirector cc = new CCDirector();
+    CCBuilder cca = new AliensCC();
 
     @Override
     public void buildCommandCenter() {
-        CCDirector cc = new CCDirector();
-        CCBuilder cca = new AliensCC();
         cc.setCCBuilder(cca);
         cc.buildCommandCenter();
+
 
         //CommandCenter commandCenter = cc.getCommandCenter();
     }
@@ -98,8 +100,23 @@ public class AliensBuilder extends RaceBuilder {
     }
 
     @Override
-    public String returnName() {
-        return "Alien";
+    public int giveMoney() {
+        return cca.getMoney();
+    }
+
+    @Override
+    public int giveLife() {
+        return cca.getLife();
+    }
+
+    @Override
+    public int giveMaterials() {
+        return cca.getMaterials();
+    }
+
+    @Override
+    public int giveLevel() {
+        return cca.getLevel();
     }
 
 }

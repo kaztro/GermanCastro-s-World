@@ -9,4 +9,24 @@ public class AndroidsCC extends CCBuilder {
     public void buildMoney() { cc.setMoney(100); }
 
     public void buildMaterials() { cc.setMaterials(400); }
+
+    @Override
+    public int getMoney() {
+        return super.getMoney();
+    }
+
+    @Override
+    public int getLife() {
+        return super.getLife();
+    }
+
+    @Override
+    public int getMaterials() {
+        return super.getMaterials();
+    }
+
+    @Override
+    public int getLevel() {
+        return super.getLevel();
+    }
 }

@@ -29,19 +29,31 @@ public class ConcretePlayer extends PlayerBuilder {
                 RaceBuilder alien = new AliensBuilder();
                 reign.setRaceBuilder(alien);
                 reign.generateRace();
+                giveMoney(alien);
+                giveLevel(alien);
+                giveLife(alien);
+                giveMaterials(alien);
                 //Race race1 = reign.getRace();
             case "androids":
                 player.setRacename("Androids");
                 RaceBuilder android = new AndroidsBuilder();
                 reign.setRaceBuilder(android);
                 reign.generateRace();
+                giveMoney(android);
+                giveLevel(android);
+                giveLife(android);
+                giveMaterials(android);
                 //Race race2 = reign.getRace();
             case "survivors":
                 player.setRacename("Survivors");
                 RaceBuilder survivor = new SurvivorsBuilder();
                 reign.setRaceBuilder(survivor);
                 reign.generateRace();
-                //Race race3 = reign.getRace();
+                giveMoney(survivor);
+                giveLevel(survivor);
+                giveLife(survivor);
+                giveMaterials(survivor);
+                //Race race3 = survivor.getRace();
         }
 
         /*
@@ -66,5 +78,26 @@ public class ConcretePlayer extends PlayerBuilder {
     @Override
     public String giveRaceName() {
         return super.giveRaceName();
+    }
+
+
+    @Override
+    public int giveMoney(RaceBuilder a) {
+        return a.giveMoney();
+    }
+
+    @Override
+    public int giveLife(RaceBuilder a) {
+        return a.giveLife();
+    }
+
+    @Override
+    public int giveMaterials(RaceBuilder a) {
+        return a.giveMaterials();
+    }
+
+    @Override
+    public int giveLevel(RaceBuilder a) {
+        return a.giveLevel();
     }
 }

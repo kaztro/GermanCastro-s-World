@@ -21,5 +21,21 @@ public class CommandCenter {
     public void setMaterials(int materials) {
         this.materials = materials;
     }
+
+    public int getLife() {
+        return life;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public int getMoney() {
+        return money;
+    }
+
+    public int getMaterials() {
+        return materials;
+    }
 }
 

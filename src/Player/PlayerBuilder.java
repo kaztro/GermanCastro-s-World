@@ -1,6 +1,7 @@
 package Player;
 
 import RacesBuilder.Earth;
+import RacesBuilder.RaceBuilder;
 
 public abstract class PlayerBuilder {
     protected Player player;
@@ -24,5 +25,13 @@ public abstract class PlayerBuilder {
     public String giveRaceName() {
         return player.getRacename();
     }
+
+    public abstract int giveMoney(RaceBuilder a);
+
+    public abstract int giveLife(RaceBuilder a);
+
+    public abstract int giveMaterials(RaceBuilder a);
+
+    public abstract int giveLevel(RaceBuilder a);
 
 }

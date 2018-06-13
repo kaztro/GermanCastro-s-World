@@ -17,9 +17,6 @@ public class EnergyFactory implements AbstractFactory {
                 return new EnergyDrinks();
             case "solarenergy":
                 return new SolarEnergy();
-            case "comienzo":
-                System.out.println("hola");
-                break;
         }
         return null;
     }

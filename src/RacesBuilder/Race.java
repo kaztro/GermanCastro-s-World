@@ -1,11 +1,13 @@
 package RacesBuilder;
 
 import CommandCenter.CCDirector;
+import CommandCenter.CommandCenter;
 import Factory.FactoryProducer;
 
 public class Race {
-    private CCDirector CommandCenter;
-    private FactoryProducer estructures;
+    //private CCDirector CommandCenter;
+    private CommandCenter command;
+    //private FactoryProducer estructures;
     private int tempConstruct;
     private int cantDamage;
     private String raza;
@@ -13,10 +15,11 @@ public class Race {
         return CommandCenter;
     }*/
 
-    public void setCommandCenter(CCDirector commandCenter) {
-        CommandCenter = commandCenter;
+    public void setCommand(CommandCenter commandC) {
+        command = commandC;
     }
-/*
+
+    /*
     public void setEstructures(FactoryProducer factoryProducer) {
         estructures = factoryProducer;
     }
