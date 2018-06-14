@@ -3,17 +3,19 @@ package Estructures.Vehicles;
 import Estructures.Army.Army;
 import Estructures.Energy.Energy;
 import Estructures.Materials.Materials;
-import Estructures.Proletariat.Estructures;
+import Estructures.Proletariat.Structures;
 import Factory.AbstractFactory;
 
 public class VehiclesFactory implements AbstractFactory {
     @Override
     public Vehicles getVehicles(String type) {
         switch (type) {
-            case "tank":
-                return new Tank();
-            case "convoy":
-                return new Convoy();
+            case "aliensvehicles":
+                return new AliensVehicles();
+            case "survivorsvehicles":
+                return new SurvivorsVehicles();
+            case "androidsvehicles":
+                return new AndroidsVehicles();
         }
         return null;
     }
@@ -29,7 +31,7 @@ public class VehiclesFactory implements AbstractFactory {
     }
 
     @Override
-    public Estructures getEstructures(String type) {
+    public Structures getEstructures(String type) {
         return null;
     }
 

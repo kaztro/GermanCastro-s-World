@@ -1,8 +1,8 @@
 package Estructures.Proletariat;
 
-public class Loot implements Estructures {
+public class Loot implements Structures {
     @Override
     public void GenerateMoney() {
-        System.out.println("--Activando maquila futuristas-- Â¡pam!, Â¡plaf!, Â¡clonc!, Â¡zis, zas!");
+        System.out.println("--Activating futurist maquila-- Â¡pam!, Â¡plaf!, Â¡clonc!, Â¡zis, zas!");
     }
 }

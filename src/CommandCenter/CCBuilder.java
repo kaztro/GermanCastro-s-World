@@ -13,7 +13,7 @@ public abstract class CCBuilder {
     public abstract void buildLevel();
     public abstract void buildMoney();
     public abstract void buildMaterials();
-
+/*
     public int getMoney() {
         return cc.getMoney();
     }

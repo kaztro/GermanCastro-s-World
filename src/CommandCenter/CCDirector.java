@@ -5,6 +5,10 @@ public class CCDirector {
 
     public void setCCBuilder(CCBuilder ccb) { cCBuilder = ccb; }
 
+    public CommandCenter getCommandCenter() {
+        return cCBuilder.getCommandCenter();
+    }
+
     //public CommandCenter getCommandCenter() {return cCBuilder.getCommandCenter();}
 
     public void buildCommandCenter() {

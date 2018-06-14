@@ -6,7 +6,7 @@ import Factory.FactoryProducer;
 
 public class Race {
     //private CCDirector CommandCenter;
-    private CommandCenter command;
+    private CCDirector command;
     //private FactoryProducer estructures;
     private int tempConstruct;
     private int cantDamage;
@@ -15,8 +15,33 @@ public class Race {
         return CommandCenter;
     }*/
 
-    public void setCommand(CommandCenter commandC) {
-        command = commandC;
+    public CCDirector getCommand() {
+        return command;
+    }
+
+    public void setCommand(CCDirector command) {
+        this.command = command;
+    }
+
+    /*
+        public void setCommand(CommandCenter commandC) {
+            command = commandC;
+        }
+
+        public CommandCenter getCommand() {
+            return command;
+        }
+    */
+    public int getTempConstruct() {
+        return tempConstruct;
+    }
+
+    public int getCantDamage() {
+        return cantDamage;
+    }
+
+    public String getRaza() {
+        return raza;
     }
 
     /*

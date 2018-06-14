@@ -6,17 +6,14 @@ public class Player {
     private String name;
     private Earth race;
     private String racename;
-    private int money;
-    private int materials;
-    private int Life;
-    private int Level;
 
+    /* private int money;
+     private int materials;
+     private int Life;
+     private int Level;
+ */
     public void setName(String name) {
         this.name = name;
-    }
-
-    public void setRace(Earth race) {
-        this.race = race;
     }
 
     public String getName() {
@@ -34,7 +31,7 @@ public class Player {
     public String getRacename() {
         return racename;
     }
-
+/*
     public int getMoney() {
         return money;
     }
@@ -65,6 +62,6 @@ public class Player {
 
     public void setLevel(int level) {
         Level = level;
-    }
+    }*/
 }
 

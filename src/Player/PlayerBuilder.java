@@ -1,8 +1,5 @@
 package Player;
 
-import RacesBuilder.Earth;
-import RacesBuilder.RaceBuilder;
-
 public abstract class PlayerBuilder {
     protected Player player;
 
@@ -26,12 +23,12 @@ public abstract class PlayerBuilder {
         return player.getRacename();
     }
 
-    public abstract void giveMoney(RaceBuilder a);
+   /* public abstract void giveMoney(RaceBuilder a);
 
     public abstract void giveLife(RaceBuilder a);
 
     public abstract void giveMaterials(RaceBuilder a);
 
     public abstract void giveLevel(RaceBuilder a);
-
+*/
 }

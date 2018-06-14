@@ -1,5 +1,5 @@
 package Estructures.Proletariat;
 
-public interface Estructures{
+public interface Structures {
     void GenerateMoney();
 }

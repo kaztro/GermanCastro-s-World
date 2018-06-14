@@ -3,14 +3,14 @@ package Factory;
 import Estructures.Army.ArmyFactory;
 import Estructures.Energy.EnergyFactory;
 import Estructures.Materials.MaterialsFactory;
-import Estructures.Proletariat.FactoryEstructures;
+import Estructures.Proletariat.FactoryStructures;
 import Estructures.Vehicles.VehiclesFactory;
 
 public class FactoryProducer {
     public static AbstractFactory getFactory(String type){
-        switch(type){
+        switch (type) {
             case "proletariat":
-                return new FactoryEstructures();
+                return new FactoryStructures();
             case "army":
                 return new ArmyFactory();
             case "energy":

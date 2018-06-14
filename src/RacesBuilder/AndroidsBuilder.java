@@ -1,12 +1,8 @@
 package RacesBuilder;
 
-import CommandCenter.CommandCenter;
 import CommandCenter.CCDirector;
 import CommandCenter.CCBuilder;
 import CommandCenter.AndroidsCC;
-import Estructures.Proletariat.Estructures;
-import Factory.AbstractFactory;
-import Factory.FactoryProducer;
 
 public class AndroidsBuilder extends RaceBuilder {
     CCDirector cc = new CCDirector();
@@ -32,7 +28,7 @@ public class AndroidsBuilder extends RaceBuilder {
                 AbstractFactory factory;
                 factory = FactoryProducer.getFactory("estructure");
                 //System.out.println("hola");
-                //Estructures estructures = factory.getEstructures("comienzo");
+                //Structures estructures = factory.getEstructures("comienzo");
                 //System.out.println("holap");
             }
     */

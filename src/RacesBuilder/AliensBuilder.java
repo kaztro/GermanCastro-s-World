@@ -1,19 +1,8 @@
 package RacesBuilder;
 
-import CommandCenter.CommandCenter;
 import CommandCenter.CCDirector;
 import CommandCenter.CCBuilder;
 import CommandCenter.AliensCC;
-import Estructures.Army.Army;
-import Estructures.Energy.Energy;
-import Estructures.Proletariat.Estructures;
-import Estructures.Vehicles.Vehicles;
-import Factory.AbstractFactory;
-import Factory.FactoryProducer;
-import Lists.AliensList;
-
-import java.util.InputMismatchException;
-import java.util.Scanner;
 
 public class AliensBuilder extends RaceBuilder {
     /*public AliensBuilder() {
@@ -61,7 +50,7 @@ public class AliensBuilder extends RaceBuilder {
                 switch (obj) {
                     case 1:
                         fact1 = FactoryProducer.getFactory("proletariat");
-                        Estructures estructures = fact1.getEstructures("callcenter");
+                        Structures estructures = fact1.getEstructures("callcenter");
                         estructureList.addEstructures(estructures);
                         break;
                     case 2:
@@ -75,7 +64,7 @@ public class AliensBuilder extends RaceBuilder {
                     case 4:
                         fact4 = FactoryProducer.getFactory("vehicles");
                         System.out.println("Deseas crear: ");
-                        System.out.println("1. Escribe 'convoy' para un Convoy");
+                        System.out.println("1. Escribe 'convoy' para un AliensVehicles");
                         System.out.println("2. Escribe 'tank' para una tanqueta");
                         String select = cin.nextLine();
                         Vehicles vehicles = fact4.getVehicles(select);
@@ -85,7 +74,7 @@ public class AliensBuilder extends RaceBuilder {
             }
             cin.nextLine();
             //factory = FactoryProducer.getFactory("proletariat");
-            //Estructures estructures = factory.getEstructures("callcenter");
+            //Structures estructures = factory.getEstructures("callcenter");
         }
     }*/
 
@@ -98,6 +87,7 @@ public class AliensBuilder extends RaceBuilder {
     public void buildCantDamage() {
         race.setCantDamage(20);
     }
+
 
     @Override
     public int giveMoney() {
@@ -144,7 +134,7 @@ public class AliensBuilder extends RaceBuilder {
     public void generateEstructures() {
         AbstractFactory factory;
         factory = FactoryProducer.getFactory("estructure");
-        Estructures estructures = factory.getEstructures("comienzo");
+        Structures estructures = factory.getEstructures("comienzo");
     }
 
     @Override

@@ -7,9 +7,9 @@ import Estructures.Vehicles.Vehicles;
 import Factory.AbstractFactory;
 
 
-public class FactoryEstructures implements AbstractFactory {
+public class FactoryStructures implements AbstractFactory {
     @Override
-    public Estructures getEstructures(String type) {
+    public Structures getEstructures(String type) {
         switch (type) {
             case "callcenter":
                 return new CallCenter();

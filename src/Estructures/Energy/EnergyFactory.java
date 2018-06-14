@@ -2,7 +2,7 @@ package Estructures.Energy;
 
 import Estructures.Army.Army;
 import Estructures.Materials.Materials;
-import Estructures.Proletariat.Estructures;
+import Estructures.Proletariat.Structures;
 import Estructures.Vehicles.Vehicles;
 import Factory.AbstractFactory;
 
@@ -27,7 +27,7 @@ public class EnergyFactory implements AbstractFactory {
     }
 
     @Override
-    public Estructures getEstructures(String type) {
+    public Structures getEstructures(String type) {
         return null;
     }
 

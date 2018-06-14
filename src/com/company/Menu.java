@@ -5,15 +5,17 @@ import Factory.FactoryProducer;
 import Player.ConcretePlayer;
 import Player.Director;
 import Player.PlayerBuilder;
+import RacesBuilder.Race;
 
 import java.util.InputMismatchException;
-import java.util.Random;
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Menu {
     private static Menu menu;
 
     Scanner scanner = new Scanner(System.in);
+
 
     private Menu() {
     }
@@ -33,49 +35,55 @@ public class Menu {
         System.out.println("-----------------------------------------------------------------------");
     }
 
-    public void gameOptions(PlayerBuilder p, int dinero, int energia, int materiales, String raceName, String m, String e, String a, String mat) {
-        //DATOS QUEMADOS TEMPORALMENTE
-
-        String name = p.givePlayerName();
+    public void gameOptions(PlayerBuilder p, int dinero, int energia, int materiales, int level, int fase, String m, String e, String a, String mat, String v, PlayerBuilder next) {
 
         int opt = 0;
 
         AbstractFactory fact;
-
-        while (opt != 5) {
+        while (opt != 6) {
             System.out.println("-----------------------------------------------------------------------");
-            System.out.println("¦                    You lead the " + raceName + "                     ¦");
-            System.out.println("¦It's your turn " + name + " What do you wanna do now?                     ¦");
-            System.out.println("¦Wallet: " + dinero + " energy: " + energia + " Materials: " + materiales + "      ¦");
-            System.out.println("¦1.Build Energy Estructure                                             ¦");
-            System.out.println("¦2.Build Money Estructure                                              ¦");
-            System.out.println("¦3.Build Material Estructure                                           ¦");
-            System.out.println("¦4.Build Materials Estructure                                          ¦");
-            System.out.println("¦5.Build Vehicles                                                      ¦");
+            System.out.println("¦                  You lead the " + p.getPlayer().getRacename() + "        ");
+            System.out.println("¦ Your Command Center Level is " + level + "                               ");
+            System.out.println("¦It's your turn " + p.getPlayer().getName() + " What do you wanna do now?  ");
+            System.out.println("¦Wallet: " + dinero + " energy: " + energia + " Materials: " + materiales + "      ");
+            System.out.println("¦1.Build Energy Structure                                              ");
+            System.out.println("¦2.Build Money Structure                                               ");
+            System.out.println("¦3.Build Material Structure                                            ");
+            System.out.println("¦4.Build Army Structure                                                ");
+            System.out.println("¦5.Build Vehicles                                                      ");
+            System.out.println("¦6.Next                                                                ");
+            System.out.println("¦                                                        Fase: " + fase + "");
             System.out.println("-----------------------------------------------------------------------");
             try {
                 opt = scanner.nextInt();
                 switch (opt) {
                     case 1:
                         fact = FactoryProducer.getFactory("energy");
-                        fact.getEnergy(e);
+                        assert fact != null;
+                        fact.getEnergy(e).GenerateEnergy();
                         break;
                     case 2:
                         fact = FactoryProducer.getFactory("proletariat");
-                        fact.getEstructures(m);
+                        assert fact != null;
+                        fact.getEstructures(m).GenerateMoney();
                         break;
                     case 3:
                         fact = FactoryProducer.getFactory("materials");
-                        fact.getMaterials(mat);
+                        assert fact != null;
+                        fact.getMaterials(mat).GenerateMaterials();
                         break;
                     case 4:
                         fact = FactoryProducer.getFactory("army");
-                        fact.getArmy(a);
+                        validatingArmy(fact, a);
                     case 5:
                         fact = FactoryProducer.getFactory("vehicles");
-                        System.out.println("Do you want a tank or a convoy? Write tank  or convoy: ");
-                        String vehicle = scanner.nextLine();
-                        fact.getVehicles(vehicle);
+                        validatingVehicle(fact, v);
+                        break;
+                    case 6:
+                        start(p, next, false, fase);
+                        break;
+                    default:
+                        System.out.println("The number you type It's not part of the options or maybe It's not a number.\nPlease read the menu");
                 }
             } catch (InputMismatchException E) {
                 System.err.println("The number you've type It's not an Int");
@@ -85,22 +93,55 @@ public class Menu {
 
     }
 
-    public void game() {
-        /*
-        AbstractFactory fact1, fact2, fact3, fact4;
-        fact1 = FactoryProducer.getFactory("proletariat");
-        fact2 = FactoryProducer.getFactory("army");
-        fact3 = FactoryProducer.getFactory("energy");
-        fact4 = FactoryProducer.getFactory("vehicles");
-        */
+    public void validatingArmy(AbstractFactory fact, String a) {
+        while (true) {
+            System.out.println("Do you want soldiers or a super soldier? Write soldiers  or ss: ");
+            String army = scanner.nextLine();
+            if (!army.equals("soldiers") && !army.equals("ss")) {
+                System.out.println("Read and try again");
+                validatingArmy(fact, a);
+            }
+            switch (army) {
+                case "soldiers":
+                    fact.getArmy(a).GenerateSquad();
+                    break;
+                case "ss":
+                    fact.getArmy(a).GenerateSuperSoldier();
+                    break;
+            }
 
+            break;
+        }
+    }
+
+    public void validatingVehicle(AbstractFactory fact, String v) {
+        while (true) {
+            System.out.println("Do you want a tank or a convoy? Write tank  or convoy: ");
+            String army = scanner.nextLine();
+            if (!army.equals("tank") && !army.equals("convoy")) {
+                System.out.println("Read and try again");
+                validatingArmy(fact, v);
+            }
+            switch (army) {
+                case "tank":
+                    fact.getVehicles(v).GenerateTank();
+                    break;
+                case "convoy":
+                    fact.getVehicles(v).GenerateConvoy();
+                    break;
+            }
+            break;
+        }
+    }
+
+    public void game() {
 
         Director avatar = new Director(), avatar2 = new Director();
 
         int op = 0;
 
         while (op != 2) {
-
+            //test();
             firstOptions();
             try {
                 op = scanner.nextInt();
@@ -118,7 +159,7 @@ public class Menu {
                         //Player player2 = avatar.getPlayer();
                         //System.out.println(player2);
 
-                        start(p1, p2, true);
+                        start(p1, p2, true, 1);
 
                     case 2:
                         System.exit(-1);
@@ -134,47 +175,61 @@ public class Menu {
 
     }
 
+
     public int random() {
-        int[] num = {1, 2};
+        /*int[] num = {1, 2};
         Random r = new Random();
         for (int i = 0; i < 2; i++) {
             int result = r.nextInt(num.length);
             return result;
-        }
-        return 0;
+        }*/
+        return ThreadLocalRandom.current().nextInt(1, 2 + 1);
     }
 
-    public void start(PlayerBuilder p1, PlayerBuilder p2, Boolean firstTime) {
-        if (firstTime == true) {
+    public void start(PlayerBuilder p1, PlayerBuilder p2, Boolean firstTime, int fase) {
+        if (firstTime) {
             int whoStarts = random();
             if (whoStarts == 1) {
-                switch (p2.giveRaceName()) {
+                switch (p2.getPlayer().getRacename()) {
                     case "Aliens":
-                        gameOptions(p2, 1000, 500, 400, p1.giveRaceName(), "loot", "solarenergy", "aliensarmy", "aliensmaterials");
+                        gameOptions(p2, 0, 500, 1, 2, fase, "loot", "solarenergy", "aliensarmy", "aliensmaterials", "aliensvehicles", p1);
                         break;
                     case "Survivors":
-                        gameOptions(p2, 1000, 500, 400, p1.giveRaceName(), "callcenter", "energydrinks", "survivorsarmy", "survivorsmaterials");
+                        gameOptions(p2, 0, 500, 1, 2, fase, "callcenter", "energydrinks", "survivorsarmy", "survivorsmaterials", "survivorsvehicles", p1);
                         break;
                     case "Androids":
-                        gameOptions(p2, 1000, 500, 400, p1.giveRaceName(), "offset", "energydrinks", "androidsarmy", "androidsmaterials");
+                        gameOptions(p2, 0, 500, 1, 2, fase, "offset", "energydrinks", "androidsarmy", "androidsmaterials", "androidsvehicles", p1);
                         break;
                 }
 
             }
-            if (whoStarts == 0) {
-                switch (p1.giveRaceName()) {
+            if (whoStarts == 2) {
+
+                switch (p1.getPlayer().getRacename()) {
                     case "Aliens":
-                        gameOptions(p1, 1000, 500, 400, p1.giveRaceName(), "loot", "solarenergy", "aliensarmy", "aliensmaterials");
+                        gameOptions(p1, 3, 500, 4, 0, fase, "loot", "solarenergy", "aliensarmy", "aliensmaterials", "aliensvehicles", p2);
                         break;
                     case "Androids":
-                        gameOptions(p1, 1000, 500, 400, p1.giveRaceName(), "offset", "energydrinks", "androidsarmy", "adroidsmaterials");
+                        gameOptions(p1, 3, 500, 4, 0, fase, "offset", "energydrinks", "androidsarmy", "adroidsmaterials", "androidsvehicles", p2);
                         break;
                     case "Survivors":
-                        gameOptions(p1, 1000, 500, 400, p1.giveRaceName(), "callcenter", "energydrinks", "survivorsarmy", "survivorsmaterials");
+                        gameOptions(p1, 3, 500, 4, 0, fase, "callcenter", "energydrinks", "survivorsarmy", "survivorsmaterials", "survivorsvehicles", p2);
                         break;
                 }
+            }
+        } else {
+            fase += 1;
+            switch (p2.getPlayer().getRacename()) {
+                case "Survivors":
+                    gameOptions(p2, 0, 500, 1, 2, fase, "callcenter", "energydrinks", "survivorsarmy", "survivorsmaterials", "survivorsvehicles", p1);
+                    break;
+                case "Androids":
+                    gameOptions(p2, 0, 500, 1, 2, fase, "offset", "energydrinks", "androidsarmy", "androidsmaterials", "androidsvehicles", p1);
+                    break;
+                case "Aliens":
+                    gameOptions(p2, 0, 500, 1, 2, fase, "loot", "solarenergy", "aliensarmy", "aliensmaterials", "aliensvehicles", p1);
+                    break;
             }
         }
-
     }
 }

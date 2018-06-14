@@ -19,42 +19,53 @@ public class ConcretePlayer extends PlayerBuilder {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Para escoger la raza a la que quieres pertenecer escribe: ");
-        System.out.println("'aliens' para Aliens \n'androids' para Androides \n'survivors' para Humanos sobrevivientes");
-        String key = scanner.nextLine();
+        validatingRaces(reign, scanner);
+    }
 
-        switch (key) {
-            case "aliens":
-                player.setRacename("Aliens");
-                RaceBuilder alien = new AliensBuilder();
-                reign.setRaceBuilder(alien);
-                reign.generateRace();
-                giveMoney(alien);
+    public void validatingRaces(Earth reign, Scanner scanner) {
+        while (true) {
+            System.out.println("'aliens' para Aliens \n'androids' para Androides \n'survivors' para Humanos sobrevivientes");
+            String key = scanner.nextLine();
+            if (!key.equals("aliens") && !key.equals("survivors") && !key.equals("androids")) {
+                System.out.println("Read and try again");
+                validatingRaces(reign, scanner);
+            }
+            switch (key) {
+                case "aliens":
+                    player.setRacename("Aliens");
+                    RaceBuilder alien = new AliensBuilder();
+                    reign.setRaceBuilder(alien);
+                    reign.generateRace();
+                    break;
+                /*giveMoney(alien);
                 giveLevel(alien);
                 giveLife(alien);
-                giveMaterials(alien);
+                giveMaterials(alien);*/
                 //Race race1 = reign.getRace();
-            case "androids":
-                player.setRacename("Androids");
-                RaceBuilder android = new AndroidsBuilder();
-                reign.setRaceBuilder(android);
-                reign.generateRace();
-                giveMoney(android);
+                case "androids":
+                    player.setRacename("Androids");
+                    RaceBuilder android = new AndroidsBuilder();
+                    reign.setRaceBuilder(android);
+                    reign.generateRace();
+                    break;
+                /*giveMoney(android);
                 giveLevel(android);
                 giveLife(android);
-                giveMaterials(android);
+                giveMaterials(android);*/
                 //Race race2 = reign.getRace();
-            case "survivors":
-                player.setRacename("Survivors");
-                RaceBuilder survivor = new SurvivorsBuilder();
-                reign.setRaceBuilder(survivor);
-                reign.generateRace();
-                giveMoney(survivor);
+                case "survivors":
+                    player.setRacename("Survivors");
+                    RaceBuilder survivor = new SurvivorsBuilder();
+                    reign.setRaceBuilder(survivor);
+                    reign.generateRace();
+                    break;
+                /*giveMoney(survivor);
                 giveLevel(survivor);
                 giveLife(survivor);
-                giveMaterials(survivor);
+                giveMaterials(survivor);*/
                 //Race race3 = survivor.getRace();
-        }
+            }
+            break;
 
         /*
         RaceBuilder AndroidsBuilder = new AndroidsBuilder();
@@ -63,6 +74,7 @@ public class ConcretePlayer extends PlayerBuilder {
         reign.generateRace();
 
         Race race = reign.getRace();*/
+        }
     }
 
     @Override
@@ -80,7 +92,7 @@ public class ConcretePlayer extends PlayerBuilder {
         return super.giveRaceName();
     }
 
-
+/*
     @Override
     public void giveMoney(RaceBuilder a) {
         player.setMoney(a.giveMoney());
@@ -99,5 +111,5 @@ public class ConcretePlayer extends PlayerBuilder {
     @Override
     public void giveLevel(RaceBuilder a) {
         player.setLevel(a.giveLevel());
-    }
+    }*/
 }

@@ -3,6 +3,6 @@ package Estructures.Energy;
 public class SolarEnergy implements Energy {
     @Override
     public void GenerateEnergy() {
-        System.out.println("More more");
+        System.out.println("Your power source is generating");
     }
 }
