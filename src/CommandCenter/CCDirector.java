@@ -9,7 +9,6 @@ public class CCDirector {
         return cCBuilder.getCommandCenter();
     }
 
-    //public CommandCenter getCommandCenter() {return cCBuilder.getCommandCenter();}
 
     public void buildCommandCenter() {
         cCBuilder.createNewCommandCenter();
@@ -19,12 +18,4 @@ public class CCDirector {
         cCBuilder.buildMaterials();
     }
 
-
-    /*
-    public void getCommandCenter() {
-        cCBuilder.getLevel();
-        cCBuilder.getLife();
-        cCBuilder.getMaterials();
-        cCBuilder.getMoney();
-    }*/
 }

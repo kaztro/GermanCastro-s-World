@@ -37,43 +37,24 @@ public class ConcretePlayer extends PlayerBuilder {
                     reign.setRaceBuilder(alien);
                     reign.generateRace();
                     break;
-                /*giveMoney(alien);
-                giveLevel(alien);
-                giveLife(alien);
-                giveMaterials(alien);*/
-                //Race race1 = reign.getRace();
+
                 case "androids":
                     player.setRacename("Androids");
                     RaceBuilder android = new AndroidsBuilder();
                     reign.setRaceBuilder(android);
                     reign.generateRace();
                     break;
-                /*giveMoney(android);
-                giveLevel(android);
-                giveLife(android);
-                giveMaterials(android);*/
-                //Race race2 = reign.getRace();
+
                 case "survivors":
                     player.setRacename("Survivors");
                     RaceBuilder survivor = new SurvivorsBuilder();
                     reign.setRaceBuilder(survivor);
                     reign.generateRace();
                     break;
-                /*giveMoney(survivor);
-                giveLevel(survivor);
-                giveLife(survivor);
-                giveMaterials(survivor);*/
-                //Race race3 = survivor.getRace();
+
             }
             break;
 
-        /*
-        RaceBuilder AndroidsBuilder = new AndroidsBuilder();
-
-        reign.setRaceBuilder(AndroidsBuilder);
-        reign.generateRace();
-
-        Race race = reign.getRace();*/
         }
     }
 
@@ -92,24 +73,4 @@ public class ConcretePlayer extends PlayerBuilder {
         return super.giveRaceName();
     }
 
-/*
-    @Override
-    public void giveMoney(RaceBuilder a) {
-        player.setMoney(a.giveMoney());
-    }
-
-    @Override
-    public void giveLife(RaceBuilder a) {
-        player.setLife(a.giveLife());
-    }
-
-    @Override
-    public void giveMaterials(RaceBuilder a) {
-        player.setMaterials(a.giveMaterials());
-    }
-
-    @Override
-    public void giveLevel(RaceBuilder a) {
-        player.setLevel(a.giveLevel());
-    }*/
 }

@@ -19,25 +19,5 @@ public class AliensCC extends CCBuilder {
         super.createNewCommandCenter();
     }
 
-        /*
-        @Override
-        public int getMoney() {
-                return super.getMoney();
-        }
-
-        @Override
-        public int getLife() {
-                return super.getLife();
-        }
-
-        @Override
-        public int getMaterials() {
-                return super.getMaterials();
-        }
-
-        @Override
-        public int getLevel() {
-                return super.getLevel();
-        }*/
 }
 

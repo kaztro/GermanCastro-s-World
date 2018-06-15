@@ -19,19 +19,9 @@ public class AndroidsBuilder extends RaceBuilder {
         cc.setCCBuilder(cca);
         cc.buildCommandCenter();
 
-        //CommandCenter commandCenter = cc.getCommandCenter();
     }
 
-    /*
-            @Override
-            public void buildEstructures() {
-                AbstractFactory factory;
-                factory = FactoryProducer.getFactory("estructure");
-                //System.out.println("hola");
-                //Structures estructures = factory.getEstructures("comienzo");
-                //System.out.println("holap");
-            }
-    */
+
     @Override
     public void buildTempConstruct() {
         race.setTempConstruct(2);
@@ -42,24 +32,6 @@ public class AndroidsBuilder extends RaceBuilder {
         race.setCantDamage(30);
     }
 
-    @Override
-    public int giveMoney() {
-        return cca.getMoney();
-    }
 
-    @Override
-    public int giveLife() {
-        return cca.getLife();
-    }
-
-    @Override
-    public int giveMaterials() {
-        return cca.getMaterials();
-    }
-
-    @Override
-    public int giveLevel() {
-        return cca.getLevel();
-    }
 
 }

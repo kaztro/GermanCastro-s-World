@@ -5,7 +5,6 @@ import Factory.FactoryProducer;
 import Player.ConcretePlayer;
 import Player.Director;
 import Player.PlayerBuilder;
-import RacesBuilder.Race;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -141,7 +140,7 @@ public class Menu {
         int op = 0;
 
         while (op != 2) {
-            //test();
+
             firstOptions();
             try {
                 op = scanner.nextInt();
@@ -151,13 +150,10 @@ public class Menu {
                         PlayerBuilder p1 = new ConcretePlayer();
                         avatar.setPlayerBuilder(p1);
                         avatar.buildPlayer();
-                        //Player player1 = avatar.getPlayer();
-                        //System.out.println(player1);
+
                         PlayerBuilder p2 = new ConcretePlayer();
                         avatar2.setPlayerBuilder(p2);
                         avatar2.buildPlayer();
-                        //Player player2 = avatar.getPlayer();
-                        //System.out.println(player2);
 
                         start(p1, p2, true, 1);
 
@@ -170,19 +166,13 @@ public class Menu {
                 System.err.println("The number you've type It's not an Int");
             }
             scanner.nextLine();
-            //System.out.println(random());
+
         }
 
     }
 
 
     public int random() {
-        /*int[] num = {1, 2};
-        Random r = new Random();
-        for (int i = 0; i < 2; i++) {
-            int result = r.nextInt(num.length);
-            return result;
-        }*/
         return ThreadLocalRandom.current().nextInt(1, 2 + 1);
     }
 
